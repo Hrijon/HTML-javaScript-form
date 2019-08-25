@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<HTML>
+    <head>
+       <title>Q4 sorting</title> 
+    </head>
+
+    <body>
+        <h2>Welcome to sorting Program</h2>
+
+        <div class="form">
+            <form id="frm1" action="">
+                Enter Student Name: <input id="input" type="text" name="name" />
+                        
+            </form> 
+              
+            <button onclick="myFunction()">&#9166; Enter</button>
+            
+            <textarea rows="15" cols="60" id="demo"> </textarea>
+        </div>
+
+        <script>
+            function myFunction() {
+              var x = document.getElementById("frm1");
+              var text = "";
+              var i;
+              for (i = 0; i < x.length ;i++) {
+                text += x.elements[i].value ;
+              }
+              document.getElementById("demo").innerHTML = text;
+            }
+        </script>
+    </body>
+</HTML>
