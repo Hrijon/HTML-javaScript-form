@@ -1,13 +1,35 @@
-var emptyArray =[];
-var name;
+  var x = 0;
+  var text = "";
+  var array = Array();
+  var i;
 
+  function add_element_to_array()
+  {
+    array[x] = document.getElementById("text1").value;
+    alert("Element: " + array[x] + " Added at index " + x);
+    x++;
+    document.getElementById("text1").value = "";
 
-function myFunction(){
-    var name = document.MyForm.name.value; 
+    display_array();
+  }
+  
 
-    // var x = document.getElementById("input");
-    // emptyArray.push(x);
-   
-}
+  function display_array()
+  {
+    var e = "";   
+        
+    for (var y=0; y<array.length; y++)
+    {
+      sorting();
+      e += y +  ") " + array[y] + "\n\n";
 
-console.log(name);
+    }
+    
+    document.getElementById("Result").innerHTML = e;
+  }
+
+  function sorting()
+  {
+    array.sort();
+  }
+  
